@@ -172,7 +172,6 @@ jobs:
           sudo apt-get install cf-cli
       - name: Migate tracker-database
         run: |
-          chmod +x migrate-databases
           cf api "$CF_API_URL"
           cf auth
           cf target -o "$CF_ORG" -s "$CF_SPACE"
